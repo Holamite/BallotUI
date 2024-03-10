@@ -14,8 +14,8 @@ const useGiveRightToVote = (address) => {
   const { walletProvider } = useWeb3ModalProvider();
 
   return useCallback(async () => {
-    if (!isSupportedChain(chainId)) return console.error("Wrong network");
-    if (!isAddress(address)) return console.error("Invalid address");
+    if (!isSupportedChain(chainId)) return toast.error("Wrong network");
+    if (!isAddress(address)) return toast.error("Invalid address");
     const readWriteProvider = getProvider(walletProvider);
     const signer = await readWriteProvider.getSigner();
 
