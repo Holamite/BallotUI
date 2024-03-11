@@ -64,7 +64,7 @@ const HandleVote = ({ loading, proposals }) => {
             />
           ))
         ) : (
-          <Text>Could not get proposals!!</Text>
+          <Text>Could not get proposals!!!</Text>
         )}
       </Flex>
     </main>
